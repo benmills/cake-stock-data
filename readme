@@ -1,0 +1,25 @@
+A Simple CakePHP component that using cURL to grab stock data form Yahoo.
+
+<h1>Installation</h1>
+1. Place stocks.php in app/controllers/components/
+2. In the controller you are working with make sure to add Stocks to the components array. 
+(I.E. <code>var $components = array('Stocks');</code>)
+
+<h1>Usage</h1>
+Pass the 'get' function an array of stock symbols:
+<code>
+$this->Stocks->get(array('AAPL'));
+</code>
+
+And you should receive an array that looks like this:
+<code>
+Array
+(
+    [0] => Array
+        (
+            [symbol] => "AAPL"
+            [change] => "-1.31"
+            [current] => 203.91
+        )
+)
+</code>
